@@ -30,6 +30,7 @@ POLL_INTERVAL = 300  # seconds
 
 def invoke(worker, job):
     c = paramiko.SSHClient()
+    c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     c.connect(worker)
     _, stdout, _ = c.exec_command('python3 job.py {}'.format(job))
     return stdout
