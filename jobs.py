@@ -57,7 +57,7 @@ scp.get('/home/lakinsm/hmm_testing/cs_cluster_files/parts/pediatric/{}'.format(f
 p = subprocess.Popen(HMMER_CMD.format(cpu, dirname, outname, dirname, dirname, fastafile), stderr=subprocess.PIPE, shell=True)
 
 stderrlines = list(p.stderr)
-print(stderrlines)
+sys.stderr.write('\n'.join(stderrlines)+'\n')
 p.wait()
 
 if is_complete(dirname+'outputfiles/{}'.format(outname)):

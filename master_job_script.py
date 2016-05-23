@@ -26,13 +26,14 @@ jobs = queue.Queue()
 workers = []
 worker_status = {}
 POLL_INTERVAL = 300  # seconds
+UPPER_BOUND = 0
 
-
-def invoke(worker, job):
+def invoke(worker, job, randsleep):
+    print('{}, {} started'.format(worker, job))
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    c.connect(worker)
-    _, stdout, _ = c.exec_command('python3 job.py {}'.format(job))
+    c.connect(worker+'.cs.colostate.edu')
+    _, stdout, _ = c.exec_command('python3 job.py {} {}'.format(job, randsleep))
     return stdout
 
 
@@ -40,6 +41,7 @@ def is_complete(filename):
     if len(filename) == 1:
         filename = filename[0]
     if not os.path.isfile(filename):
+        print('file not found, {}'.format(filename))
         return False
     with open(filename, 'rb') as f:
         f.seek(-5, 2)
@@ -63,7 +65,7 @@ def init_workers(job_queue):
     for w in workers:
         if not job_queue.empty():
            job = job_queue.get()
-           stdout = invoke(w, job)
+           stdout = invoke(w, job, UPPER_BOUND)
            worker_status[w] = (job, stdout)
 
 
@@ -71,7 +73,7 @@ if __name__ == '__main__':
     initjobs = load_initial_jobs(sys.argv[2])
     workers = load_workers(sys.argv[1])
     for i in initjobs:
-        if not is_completed(i):
+        if not is_complete(i):
             jobs.put(i)
     
     init_workers(jobs)
@@ -81,10 +83,13 @@ if __name__ == '__main__':
         for k, v in worker_status.items():
             w_status = v[1].channel.exit_status_ready()
             if w_status:
-                if not is_complete(v[0]):
+                print(v[0])
+                if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0])):
+                    print('{} not completed, requeuing...'.format(v[0]))
                     jobs.put(v[0])
+                print('{}, {} complete'.format(k, v[0]))
                 del worker_status[k]
             if not jobs.empty():
                 job = jobs.get()
-                worker_status[k] = (job, invoke(k, job))
-        time.sleep(POLL_INTERVAL)
+                worker_status[k] = (job, invoke(k, job, 0))
+        #time.sleep(POLL_INTERVAL)
