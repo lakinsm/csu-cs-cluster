@@ -1,0 +1,5 @@
+test1.fasta
+test2.fasta
+test3.fasta
+test4.fasta
+

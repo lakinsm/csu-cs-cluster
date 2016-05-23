@@ -15,14 +15,14 @@
 
 
 
-import Queue
+import queue
 import paramiko
 import sys
 import os
 import re
 import time
 
-jobs = Queue.Queue()
+jobs = queue.Queue()
 workers = []
 worker_status = {}
 POLL_INTERVAL = 300  # seconds
@@ -36,15 +36,27 @@ def invoke(worker, job):
     return stdout
 
 
-def is_completed(job):
-    """Check output file for existence then completion"""
-    pass
+def is_complete(filename):
+    if len(filename) == 1:
+        filename = filename[0]
+    if not os.path.isfile(filename):
+        return False
+    with open(filename, 'rb') as f:
+        f.seek(-5, 2)
+        status = f.read(5)
+    return True if status.rstrip() == b'[ok]' else False
+
+
+def load_workers(workerdefs):
+    """Load in list of workers"""
+    with open(workerdefs, 'r') as w:
+        return [x for x in w.read().split() if w]
 
 
 def load_initial_jobs(jobdefs):
     """Load the intiial jobs"""
     with open(jobdefs, 'r') as j:
-        return initlist = j.read().split()
+        return [x for x in j.read().split() if x]
 
 
 def init_workers(job_queue):
@@ -56,7 +68,8 @@ def init_workers(job_queue):
 
 
 if __name__ == '__main__':
-    initjobs = load_initial_jobs(sys.argv[1])
+    initjobs = load_initial_jobs(sys.argv[2])
+    workers = load_workers(sys.argv[1])
     for i in initjobs:
         if not is_completed(i):
             jobs.put(i)
@@ -68,7 +81,7 @@ if __name__ == '__main__':
         for k, v in worker_status.items():
             w_status = v[1].channel.exit_status_ready()
             if w_status:
-                if not is_completed(v[0]):
+                if not is_complete(v[0]):
                     jobs.put(v[0])
                 del worker_status[k]
             if not jobs.empty():
