@@ -43,7 +43,8 @@ def invoke(worker, job, randsleep):
     c.connect(worker+'.cs.colostate.edu')
     ht_scale_factor = 2 if "Xeon" in cpu_info[worker][machines.TYPE] else 1
     virt_cpu_num = parse_cores(cpu_info[worker][machines.CPU]) * ht_scale_factor   
-    cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {}'.format(job, randsleep)
+    cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 '
+    '/s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, virt_cpu_num)
     stdin, stdout, stderr = c.exec_command(cmd, timeout=JOB_SECS//virt_cpu_num)
     return c, stdin, stdout, stderr
 
