@@ -15,14 +15,14 @@
 
 
 
-import queue
 import paramiko
 import sys
 import os
 import re
 import time
+from collections import deque
 
-jobs = queue.Queue()
+jobs = deque()
 workers = []
 worker_status = {}
 POLL_INTERVAL = 300  # seconds
@@ -60,15 +60,15 @@ def load_workers(workerdefs):
 def load_initial_jobs(jobdefs):
     """Load the intiial jobs"""
     with open(jobdefs, 'r') as j:
-        return [x for x in j.read().split() if x]
+        return deque((x for x in j.read().split() if x and not is_complete(x)))
 
 
 def init_workers(job_queue):
     for w in workers:
         if not job_queue.empty():
-           job = job_queue.get()
-           channels = invoke(w, job, UPPER_BOUND)
-           worker_status[w] = (job, channels)
+           job = job_queue.popleft()
+           c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
+           worker_status[w] = (job, c, stdin, stdout, stderr)
 
 
 if __name__ == '__main__':
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     workers = load_workers(sys.argv[1])
     for i in initjobs:
         if not is_complete(i):
-            jobs.put(i)
+            jobs.append(i)
     
     init_workers(jobs)
 
@@ -84,13 +84,13 @@ if __name__ == '__main__':
     while not jobs.empty() or worker_status:
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
-            w_status = v[1][2].channel.closed
+            w_status = v[2].channel.closed
             if w_status:
                 print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0])):
                     print('{} error: {}'.format(k, v[1].readlines()))
                     print('{} not completed, requeuing...'.format(v[0]))
-                    jobs.put(v[0])
+                    jobs.append(v[0])
                 print('{}, {} complete'.format(k, v[0]))
                 del worker_status[k]
             if not jobs.empty():

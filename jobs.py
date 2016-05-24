@@ -36,7 +36,7 @@ _, fastafile, randsleep = sys.argv
 time.sleep(random.randint(0,int(randsleep)))
 
 outname = fastafile.replace('.fasta', '.tblout.scan')
-cpu = int(multiprocessing.cpu_count()) * 2
+cpu = int(multiprocessing.cpu_count())
 dirname = '/s/{}/a/tmp/'.format(socket.gethostname())
 
 shutil.rmtree(dirname+'inputfiles', ignore_errors=True)
