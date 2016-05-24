@@ -81,19 +81,26 @@ if __name__ == '__main__':
     init_workers(jobs)
 
     ## While there are jobs not finished; in queue or associated with worker
-    while jobs or worker_status:
+    while jobs or any(x for x in worker_status.values()):
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
-            w_status = v[2].channel.closed
-            if w_status:
+            try:
+                w_status = v[2].channel.closed
+            except IndexError:
+                w_status = True
+            if w_status and v:
                 #print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
                     print('{} error: {}'.format(k, v[3].readlines()))
                     print('{} not completed, requeuing...'.format(v[0]))
                     jobs.append(v[0])
                 print('{}, {} complete'.format(k, v[0]))
-                del worker_status[k]
+                worker_status[k] = []
                 if jobs:
+                    job = jobs.popleft()
+                    c, stdin, stdout, stderr = invoke(k, job, 0)
+                    worker_status[k] = [job, c, stdin, stdout, stderr]
+            elif w_status and jobs:
                     job = jobs.popleft()
                     c, stdin, stdout, stderr = invoke(k, job, 0)
                     worker_status[k] = [job, c, stdin, stdout, stderr]
