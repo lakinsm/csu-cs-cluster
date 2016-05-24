@@ -26,6 +26,11 @@ def is_complete(filename):
     return True if status.rstrip() == b'[ok]' else False
 
 
+def check_models_exist(dirname):
+    if not os.path.isfile(dirname+'HMMs/mmarc_groupI.hmm'):
+        sys.stderr.write('Model file not present on the machine\n')
+        sys.exit(1)
+
 # CPU, dirname, outputfile, dirname, dirname, inputfile
 HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupI.hmm {}inputfiles/{} > /dev/null'
 
@@ -36,11 +41,14 @@ psutil.Process().ionice(psutil.IOPRIO_CLASS_IDLE)
 
 _, fastafile, randsleep, cpu = sys.argv
 
+dirname = '/s/{}/a/tmp/'.format(socket.gethostname())
+
+check_models_exist(dirname)
+
 time.sleep(random.randint(0,int(randsleep)))
 
 outname = fastafile.replace('.fasta', '.tblout.scan')
 cpu = int(cpu)
-dirname = '/s/{}/a/tmp/'.format(socket.gethostname())
 
 shutil.rmtree(dirname+'inputfiles', ignore_errors=True)
 os.makedirs(dirname+'inputfiles')
