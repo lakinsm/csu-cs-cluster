@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     ## While there are jobs not finished; in queue or associated with worker
     while jobs or any(x for x in worker_status.values()):
-        print(jobs, available_workers, worker_status['albany'])
+        print(jobs, available_workers)
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
             try:

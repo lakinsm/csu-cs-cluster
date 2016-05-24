@@ -13,7 +13,7 @@ import shutil
 import multiprocessing
 import sh
 import resource
-
+from shutil import copyfile
 
 def is_complete(filename):
     if len(filename) == 1:
@@ -47,6 +47,9 @@ os.makedirs(dirname+'inputfiles')
 
 shutil.rmtree(dirname+'outputfiles', ignore_errors=True)
 os.makedirs(dirname+'outputfiles')
+
+if not os.path.isfile(dirname+'HMMs/mmarc_groupI.hmm'):
+    copyfile('/s/chopin/a/grad/lakinsm/meta-marc/src/HMMs/mmarc_groupI.hmm', dirname+'HMMs/mmarc_groupI.hmm')
 
 c = paramiko.SSHClient()
 c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
