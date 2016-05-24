@@ -36,16 +36,19 @@ JOB_SECS = 3600 * 8 * 2 # FIXME: make sensible!
 
 def parse_cores(cpu_str): return int(cpu_str.split("x")[0])
 
+def num_virt_cores(machine_name):
+    ht_scale_factor = 2 if "Xeon" in cpu_info[machine_name][machines.TYPE] else 1
+    virt_cpu_num = parse_cores(cpu_info[machine_name][machines.CPU]) * ht_scale_factor
+    return virt_cpu_num
+
 def invoke(worker, job, randsleep):
     print('{}, {} started'.format(worker, job))
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     c.connect(worker+'.cs.colostate.edu')
-    ht_scale_factor = 2 if "Xeon" in cpu_info[worker][machines.TYPE] else 1
-    virt_cpu_num = parse_cores(cpu_info[worker][machines.CPU]) * ht_scale_factor   
     cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 '
-    '/s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, virt_cpu_num)
-    stdin, stdout, stderr = c.exec_command(cmd, timeout=JOB_SECS//virt_cpu_num)
+    '/s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, num_virt_cores(worker))
+    stdin, stdout, stderr = c.exec_command(cmd)
     return c, stdin, stdout, stderr
 
 
@@ -69,7 +72,8 @@ def load_workers(workerdefs):
 def load_initial_jobs(jobdefs):
     """Load the intiial jobs"""
     with open(jobdefs, 'r') as j:
-        return deque((x for x in j.read().split() if x and not is_complete(x)))
+        return deque((x for x in j.read().split() if x and not \
+            is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(x.replace('.fasta', '.tblout.scan')))))
 
 
 def init_workers(job_queue):
@@ -77,7 +81,7 @@ def init_workers(job_queue):
         if job_queue:
            job = job_queue.popleft()
            c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
-           worker_status[w] = [job, c, stdin, stdout, stderr]
+           worker_status[w] = [job, c, stdin, stdout, stderr, time.time()]
 
 
 if __name__ == '__main__':
@@ -92,6 +96,7 @@ if __name__ == '__main__':
 
     ## While there are jobs not finished; in queue or associated with worker
     while jobs or any(x for x in worker_status.values()):
+        print(jobs, available_workers, worker_status['albany'])
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
             try:
@@ -102,11 +107,14 @@ if __name__ == '__main__':
                 #print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
                     print('{} error: {}'.format(k, v[3].read()))
-                    print('{} not completed successfully, requeuing...'.format(v[0]))
+                    print('{} not completed successfully in {:.3f} seconds on {} cores, requeuing...'.format(v[0], time.time() - v[5], num_virt_cores(k)))
                     jobs.append(v[0])
                 else:
-                    print('{} completed successfully.'.format(v[0]))
+                    print('{} completed successfully in {:.3f} seconds on {} cores.'.format(v[0], time.time() - v[5], num_virt_cores(k)))
                 print('{}, {} job finished'.format(k, v[0]))
+                worker_status[k] = []
+                available_workers.append(k)
+            elif w_status and k not in available_workers:
                 worker_status[k] = []
                 available_workers.append(k)
         random.shuffle(available_workers)
@@ -114,5 +122,5 @@ if __name__ == '__main__':
             job = jobs.popleft()
             worker = available_workers.pop()
             c, stdin, stdout, stderr = invoke(worker, job, 0)
-            worker_status[worker] = [job, c, stdin, stdout, stderr]
+            worker_status[worker] = [job, c, stdin, stdout, stderr, time.time()]
         time.sleep(POLL_INTERVAL)

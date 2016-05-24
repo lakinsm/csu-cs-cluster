@@ -29,7 +29,7 @@ def is_complete(filename):
 # CPU, dirname, outputfile, dirname, dirname, inputfile
 HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupI.hmm {}inputfiles/{} > /dev/null'
 
-resource.setrlimit(resource.RLIMIT_CPU, 3600)
+#resource.setrlimit(resource.RLIMIT_CPU, 3600)
 
 os.nice(19)
 psutil.Process().ionice(psutil.IOPRIO_CLASS_IDLE)
