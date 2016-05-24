@@ -75,11 +75,12 @@ def get_STR(machine):
 CPUs = 0
 inset = 0
 #goodmachines = set([ 'HP-xw6600-Xeon5450-SAS', 'HP-Z210-XeonE3-1230', 'HP-Z220-XeonE3-12230', 'HP-z420-XeonE5-2650v2'])
-for machine in machines:
-    if machine[OS] == 'Linux(Fedora)' and machine[NAME][0:len('lattice')] != 'lattice' and  machine[LOCATION] in morelabs:
+if __name__ == '__main':
+    for machine in machines:
+        if machine[OS] == 'Linux(Fedora)' and machine[NAME][0:len('lattice')] != 'lattice' and  machine[LOCATION] in morelabs:
         #print(machine[CPU], "\t\t", machine[MEM], "\t\t", machine[TYPE], get_STR(machine)) #machine[TYPE],
-        print(machine[NAME])
-        inset += 1
+            print(machine[NAME])
+            inset += 1
 #     #    print machine[CPU]
 
 #     if machine[NAME] in usedmachines: 
@@ -88,9 +89,9 @@ for machine in machines:
 #         print "    '" + machine[NAME] + "' : " + str(touse) + ","
 #         #print machine[TYPE], machine[CPU], machine[MEM]
 
-        mobj = re.search(r"^(\d+)x", machine[CPU])
-        if mobj:
-            CPUs += int(mobj.group(1))
+            mobj = re.search(r"^(\d+)x", machine[CPU])
+            if mobj:
+                CPUs += int(mobj.group(1))
 #         #if machine[OS] == 'Linux(64)' and machine[USE] == 'general' and "(" not in  machine[NAME] and machine[LOCATION] in labs and machine[TYPE] == 'HP-xw4600-Core2Duo-SATA':# and machine[TYPE] in goodmachines:
 #          #print  "    '" + machine[TYPE] + "' : 2," # machine[NAME], "\t\t\t",
 #     #     print machine

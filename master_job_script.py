@@ -19,22 +19,32 @@ import paramiko
 import sys
 import os
 import re
+import random
 import time
+import itertools
+import machines
 from collections import deque
 
+cpu_info = {}
 jobs = deque()
 workers = []
 worker_status = {}
+available_workers = []
 POLL_INTERVAL = 10  # seconds
 UPPER_BOUND = 0
+JOB_SECS = 3600 * 8 * 2 # FIXME: make sensible!
+
+def parse_cores(cpu_str): return int(cpu_str.split("x")[0])
 
 def invoke(worker, job, randsleep):
     print('{}, {} started'.format(worker, job))
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     c.connect(worker+'.cs.colostate.edu')
+    ht_scale_factor = 2 if "Xeon" in cpu_info[worker][machines.TYPE] else 1
+    virt_cpu_num = parse_cores(cpu_info[worker][machines.CPU]) * ht_scale_factor   
     cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {}'.format(job, randsleep)
-    stdin, stdout, stderr = c.exec_command(cmd)
+    stdin, stdout, stderr = c.exec_command(cmd, timeout=JOB_SECS//virt_cpu_num)
     return c, stdin, stdout, stderr
 
 
@@ -70,6 +80,7 @@ def init_workers(job_queue):
 
 
 if __name__ == '__main__':
+    cpu_info = {entry[0]: entry for entry in machines.machines}
     initjobs = load_initial_jobs(sys.argv[2])
     workers = load_workers(sys.argv[1])
     for i in initjobs:
@@ -90,16 +101,17 @@ if __name__ == '__main__':
                 #print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
                     print('{} error: {}'.format(k, v[3].read()))
-                    print('{} not completed, requeuing...'.format(v[0]))
+                    print('{} not completed successfully, requeuing...'.format(v[0]))
                     jobs.append(v[0])
-                print('{}, {} complete'.format(k, v[0]))
+                else:
+                    print('{} completed successfully.'.format(v[0]))
+                print('{}, {} job finished'.format(k, v[0]))
                 worker_status[k] = []
-                if jobs:
-                    job = jobs.popleft()
-                    c, stdin, stdout, stderr = invoke(k, job, 0)
-                    worker_status[k] = [job, c, stdin, stdout, stderr]
-            elif w_status and jobs:
-                    job = jobs.popleft()
-                    c, stdin, stdout, stderr = invoke(k, job, 0)
-                    worker_status[k] = [job, c, stdin, stdout, stderr]
+                available_workers.append(k)
+        random.shuffle(available_workers)
+        while jobs and available_workers:
+            job = jobs.popleft()
+            worker = available_workers.pop()
+            c, stdin, stdout, stderr = invoke(worker, job, 0)
+            worker_status[worker] = [job, c, stdin, stdout, stderr]
         time.sleep(POLL_INTERVAL)
