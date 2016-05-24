@@ -25,7 +25,7 @@ from collections import deque
 jobs = deque()
 workers = []
 worker_status = {}
-POLL_INTERVAL = 300  # seconds
+POLL_INTERVAL = 10  # seconds
 UPPER_BOUND = 0
 
 def invoke(worker, job, randsleep):
@@ -65,10 +65,10 @@ def load_initial_jobs(jobdefs):
 
 def init_workers(job_queue):
     for w in workers:
-        if not job_queue.empty():
+        if job_queue:
            job = job_queue.popleft()
            c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
-           worker_status[w] = (job, c, stdin, stdout, stderr)
+           worker_status[w] = [job, c, stdin, stdout, stderr]
 
 
 if __name__ == '__main__':
@@ -81,19 +81,20 @@ if __name__ == '__main__':
     init_workers(jobs)
 
     ## While there are jobs not finished; in queue or associated with worker
-    while not jobs.empty() or worker_status:
+    while jobs or worker_status:
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
             w_status = v[2].channel.closed
             if w_status:
-                print(w_status, v[1])
-                if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0])):
-                    print('{} error: {}'.format(k, v[1].readlines()))
+                #print(w_status, v[1])
+                if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
+                    print('{} error: {}'.format(k, v[3].readlines()))
                     print('{} not completed, requeuing...'.format(v[0]))
                     jobs.append(v[0])
                 print('{}, {} complete'.format(k, v[0]))
                 del worker_status[k]
-            if not jobs.empty():
-                job = jobs.get()
-                worker_status[k] = (job, invoke(k, job, 0))
-        #time.sleep(POLL_INTERVAL)
+                if jobs:
+                    job = jobs.popleft()
+                    c, stdin, stdout, stderr = invoke(k, job, 0)
+                    worker_status[k] = [job, c, stdin, stdout, stderr]
+        time.sleep(POLL_INTERVAL)
