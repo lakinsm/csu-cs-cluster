@@ -33,8 +33,10 @@ def invoke(worker, job, randsleep):
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     c.connect(worker+'.cs.colostate.edu')
-    _, stdout, _ = c.exec_command('python3 job.py {} {}'.format(job, randsleep))
-    return stdout
+    cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {}'.format(job, randsleep)
+    print(cmd)
+    stdin, stdout, stderr = c.exec_command(cmd)
+    return c, stdin, stdout, stderr
 
 
 def is_complete(filename):
@@ -65,8 +67,8 @@ def init_workers(job_queue):
     for w in workers:
         if not job_queue.empty():
            job = job_queue.get()
-           stdout = invoke(w, job, UPPER_BOUND)
-           worker_status[w] = (job, stdout)
+           channels = invoke(w, job, UPPER_BOUND)
+           worker_status[w] = (job, channels)
 
 
 if __name__ == '__main__':
@@ -81,10 +83,12 @@ if __name__ == '__main__':
     ## While there are jobs not finished; in queue or associated with worker
     while not jobs.empty() or worker_status:
         for k, v in worker_status.items():
-            w_status = v[1].channel.exit_status_ready()
+            ## FIXME: Timeout inside jobs file; if job hangs, exit
+            w_status = v[1][2].channel.closed
             if w_status:
-                print(v[0])
+                print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0])):
+                    print('{} error: {}'.format(k, v[1].readlines()))
                     print('{} not completed, requeuing...'.format(v[0]))
                     jobs.put(v[0])
                 print('{}, {} complete'.format(k, v[0]))
