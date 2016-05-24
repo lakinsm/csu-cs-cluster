@@ -34,12 +34,12 @@ HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --n
 os.nice(19)
 psutil.Process().ionice(psutil.IOPRIO_CLASS_IDLE)
 
-_, fastafile, randsleep = sys.argv
+_, fastafile, randsleep, cpu = sys.argv
 
 time.sleep(random.randint(0,int(randsleep)))
 
 outname = fastafile.replace('.fasta', '.tblout.scan')
-cpu = int(sys.argv[3])
+cpu = int(cpu)
 dirname = '/s/{}/a/tmp/'.format(socket.gethostname())
 
 shutil.rmtree(dirname+'inputfiles', ignore_errors=True)
