@@ -34,7 +34,6 @@ def invoke(worker, job, randsleep):
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     c.connect(worker+'.cs.colostate.edu')
     cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {}'.format(job, randsleep)
-    print(cmd)
     stdin, stdout, stderr = c.exec_command(cmd)
     return c, stdin, stdout, stderr
 
@@ -43,7 +42,6 @@ def is_complete(filename):
     if len(filename) == 1:
         filename = filename[0]
     if not os.path.isfile(filename):
-        print('file not found, {}'.format(filename))
         return False
     with open(filename, 'rb') as f:
         f.seek(-5, 2)
@@ -91,7 +89,7 @@ if __name__ == '__main__':
             if w_status and v:
                 #print(w_status, v[1])
                 if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
-                    print('{} error: {}'.format(k, v[3].readlines()))
+                    print('{} error: {}'.format(k, v[3].read()))
                     print('{} not completed, requeuing...'.format(v[0]))
                     jobs.append(v[0])
                 print('{}, {} complete'.format(k, v[0]))
