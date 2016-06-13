@@ -128,7 +128,6 @@ bacon
 eggs
 copper
 kenai
-yukon
 tuttifrutti
 apples
 acushla

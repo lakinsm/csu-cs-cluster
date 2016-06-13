@@ -30,7 +30,7 @@ jobs = deque()
 workers = []
 worker_status = {}
 available_workers = []
-POLL_INTERVAL = 10  # seconds
+POLL_INTERVAL = 200  # seconds
 UPPER_BOUND = 0
 JOB_SECS = 3600 * 8 * 2 # FIXME: make sensible!
 
@@ -95,7 +95,6 @@ if __name__ == '__main__':
 
     ## While there are jobs not finished; in queue or associated with worker
     while jobs or any(x for x in worker_status.values()):
-        print(jobs, available_workers)
         for k, v in worker_status.items():
             ## FIXME: Timeout inside jobs file; if job hangs, exit
             try:

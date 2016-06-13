@@ -53,5 +53,3 @@ turnip
 tuttifrutti
 wasabi
 yam
-yukon
-zucchini
