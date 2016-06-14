@@ -31,7 +31,7 @@ workers = []
 worker_status = {}
 available_workers = []
 POLL_INTERVAL = 60  # seconds
-UPPER_BOUND = 0
+UPPER_BOUND = 15
 JOB_SECS = 3600 * 8 * 2 # FIXME: make sensible!
 
 def parse_cores(cpu_str): return int(cpu_str.split("x")[0])
@@ -45,10 +45,13 @@ def invoke(worker, job, randsleep):
     print('{}, {} started'.format(worker, job))
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    c.connect(worker+'.cs.colostate.edu')
-    cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, num_virt_cores(worker))
-    stdin, stdout, stderr = c.exec_command(cmd)
-    return c, stdin, stdout, stderr
+    try:
+        c.connect(worker+'.cs.colostate.edu')
+        cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, num_virt_cores(worker))
+        stdin, stdout, stderr = c.exec_command(cmd)
+        return c, stdin, stdout, stderr
+    except paramiko.ssh_exception.NoValidConnectionsError:
+        return False
 
 
 def is_complete(filename):
@@ -79,7 +82,11 @@ def init_workers(job_queue):
     for w in workers:
         if job_queue:
            job = job_queue.popleft()
-           c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
+           try:
+               c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
+           except ValueError:
+               job_queue.append(job)
+               continue
            worker_status[w] = [job, c, stdin, stdout, stderr, time.time()]
 
 
@@ -119,6 +126,10 @@ if __name__ == '__main__':
         while jobs and available_workers:
             job = jobs.popleft()
             worker = available_workers.pop()
-            c, stdin, stdout, stderr = invoke(worker, job, 0)
-            worker_status[worker] = [job, c, stdin, stdout, stderr, time.time()]
+            try:
+                c, stdin, stdout, stderr = invoke(worker, job, 0)
+                worker_status[worker] = [job, c, stdin, stdout, stderr, time.time()]
+            except ValueError:
+                jobs.append(job)
+                continue
         time.sleep(POLL_INTERVAL)
