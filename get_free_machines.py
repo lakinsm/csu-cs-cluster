@@ -8,7 +8,11 @@ with open(sys.argv[1], 'r') as f:
         if not entry:
             continue
         entry = entry.split()
-        if float(entry[8]) < 3:
-            sys.stdout.write(entry[0].split('.')[0]+'\n')
+        try:
+            if float(entry[8]) < 3:
+                sys.stdout.write(entry[0].split('.')[0]+'\n')
+        except IndexError:
+            if float(entry[6]) < 3:
+                sys.stdout.write(entry[0].split('.')[0]+'\n')
 
 
