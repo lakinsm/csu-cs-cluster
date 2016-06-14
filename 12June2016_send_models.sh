@@ -1,1 +1,1 @@
-uftp-4.9.2/uftp /home/lakinsm/hmm_testing/cs_cluster_files/meta-marc/src/HMMs -E /home/lakinsm/hmm_testing/cs_cluster_files/meta-marc/src/HMMs -R 50000 -D HMMs
+/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftp /s/oak/b/nobackup/nrnoyes/HMMs -E /s/oak/b/nobackup/nrnoyes/HMMs -R 50000 -D HMMs
