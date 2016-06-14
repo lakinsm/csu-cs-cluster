@@ -30,7 +30,7 @@ jobs = deque()
 workers = []
 worker_status = {}
 available_workers = []
-POLL_INTERVAL = 200  # seconds
+POLL_INTERVAL = 60  # seconds
 UPPER_BOUND = 0
 JOB_SECS = 3600 * 8 * 2 # FIXME: make sensible!
 
