@@ -84,7 +84,7 @@ def init_workers(job_queue):
            job = job_queue.popleft()
            try:
                c, stdin, stdout, stderr = invoke(w, job, UPPER_BOUND)
-           except ValueError:
+           except (ValueError, TypeError):
                job_queue.append(job)
                continue
            worker_status[w] = [job, c, stdin, stdout, stderr, time.time()]
@@ -129,7 +129,7 @@ if __name__ == '__main__':
             try:
                 c, stdin, stdout, stderr = invoke(worker, job, 0)
                 worker_status[worker] = [job, c, stdin, stdout, stderr, time.time()]
-            except ValueError:
+            except (ValueError, TypeError):
                 jobs.append(job)
                 continue
         time.sleep(POLL_INTERVAL)

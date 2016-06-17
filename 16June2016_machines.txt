@@ -1,5 +1,4 @@
 acorn
-acushla
 albany
 almond
 ankara

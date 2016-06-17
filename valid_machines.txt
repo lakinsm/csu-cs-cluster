@@ -122,7 +122,6 @@ turnip
 wasabi
 yam
 zucchini
-acushla
 oak
 bacon
 eggs
