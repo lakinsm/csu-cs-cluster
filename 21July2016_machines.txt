@@ -68,6 +68,5 @@ pears
 oak
 bacon
 eggs
-yampa
 tuttifrutti
 apples
