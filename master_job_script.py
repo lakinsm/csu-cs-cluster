@@ -50,7 +50,7 @@ def invoke(worker, job, randsleep):
         cmd = '/s/chopin/a/grad/lakinsm/cs_cluster/cs_env/bin/python3 /s/chopin/a/grad/lakinsm/cs_cluster/jobs.py {} {} {}'.format(job, randsleep, num_virt_cores(worker))
         stdin, stdout, stderr = c.exec_command(cmd)
         return c, stdin, stdout, stderr
-    except paramiko.ssh_exception.NoValidConnectionsError:
+    except (paramiko.ssh_exception.NoValidConnectionsError, TimeoutError):
         return False
 
 
