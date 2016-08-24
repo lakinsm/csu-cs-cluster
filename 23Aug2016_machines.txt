@@ -23,13 +23,9 @@ pepper
 jakarta
 salt-lake-city
 onion
-acushla
 okra
 potato
-faure
 damascus
-yam
-zucchini
 acorn
 almond
 hickory
@@ -42,8 +38,6 @@ beech
 singapore
 pili
 brazil
-bacon
-eggs
 coconut
 lima
 pears
@@ -54,5 +48,4 @@ tallahassee
 oak
 peaches
 kenai
-massive
 tehran
