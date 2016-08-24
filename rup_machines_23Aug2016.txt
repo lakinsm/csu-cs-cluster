@@ -1,153 +1,204 @@
-pomegranates.cs.colostat up  45 days, 16:52,    load average: 0.00 0.00 0.00
-belford.cs.colostate.edu up  25 days, 22:33,    load average: 0.00 0.00 0.00
-kaiso.cs.colostate.edu   up           25 mins,  load average: 0.00 0.00 0.00
-potato.cs.colostate.edu  up  13 days, 14:40,    load average: 0.00 0.00 0.00
-lunette.cs.colostate.edu up  10 days, 15:32,    load average: 0.00 0.00 0.00
-edith-cavell.cs.colostat up  10 days, 15:10,    load average: 0.00 0.00 0.00
-k2.cs.colostate.edu      up  10 days, 15:32,    load average: 0.00 0.00 0.00
-fryatt.cs.colostate.edu  up  10 days, 15:55,    load average: 0.00 0.00 0.00
-diadem.cs.colostate.edu  up  10 days, 15:11,    load average: 0.00 0.00 0.00
-rhubarb.cs.colostate.edu up  13 days, 14:40,    load average: 0.00 0.00 0.00
-garlic.cs.colostate.edu  up  10 days, 19:26,    load average: 0.00 0.00 0.00
-shallot.cs.colostate.edu up  11 days, 18:20,    load average: 0.00 0.00 0.00
-kelp.cs.colostate.edu    up  11 days, 18:20,    load average: 0.00 0.00 0.00
-horseradish.cs.colostate up  11 days, 18:19,    load average: 0.00 0.00 0.00
-lettuce.cs.colostate.edu up  11 days, 18:20,    load average: 0.00 0.00 0.00
-zucchini.cs.colostate.ed up  45 days, 17:18,    load average: 0.00 0.00 0.00
-gourd.cs.colostate.edu   up  10 days, 19:26,    load average: 0.00 0.00 0.00
-parsley.cs.colostate.edu up  13 days, 14:41,    load average: 0.00 0.00 0.00
-fennel.cs.colostate.edu  up  10 days, 19:27,    load average: 0.00 0.00 0.00
-rutabaga.cs.colostate.ed up  10 days, 19:26,    load average: 0.00 0.00 0.00
-romanesco.cs.colostate.e up  11 days, 18:20,    load average: 0.00 0.00 0.00
-laramie.cs.colostate.edu up  10 days, 15:13,    load average: 0.00 0.00 0.00
-wasabi.cs.colostate.edu  up  11 days, 18:19,    load average: 0.00 0.00 0.00
-radish.cs.colostate.edu  up  13 days, 14:40,    load average: 0.00 0.00 0.00
-humboldt.cs.colostate.ed up  10 days, 15:10,    load average: 0.00 0.00 0.00
-kitchener.cs.colostate.e up  10 days, 15:09,    load average: 0.00 0.00 0.00
-leek.cs.colostate.edu    up  11 days, 18:19,    load average: 0.00 0.00 0.00
-parsnip.cs.colostate.edu up  13 days, 14:40,    load average: 0.00 0.00 0.00
-pea.cs.colostate.edu     up  13 days, 14:40,    load average: 0.00 0.00 0.00
-bryce.cs.colostate.edu   up  10 days, 15:11,    load average: 0.05 0.04 0.00
-okra.cs.colostate.edu    up  13 days, 14:41,    load average: 0.00 0.00 0.00
-bross.cs.colostate.edu   up  10 days, 15:11,    load average: 0.00 0.00 0.00
-pepper.cs.colostate.edu  up  13 days, 14:40,    load average: 0.00 0.00 0.00
-pumpkin.cs.colostate.edu up  13 days, 14:39,    load average: 0.00 0.00 0.00
-clemenceau.cs.colostate. up   6 days, 17:11,    load average: 0.00 0.00 0.00
-makalu.cs.colostate.edu  up  10 days, 15:10,    load average: 0.00 0.00 0.00
-athabasca.cs.colostate.e up  10 days, 15:16,    load average: 0.00 0.00 0.00
-faure.cs.colostate.edu   up  45 days, 16:52,    load average: 0.00 0.02 0.00
-assiniboine.cs.colostate up  10 days, 15:35,    load average: 0.00 0.00 0.00
-alexandra.cs.colostate.e up  10 days, 15:41,    load average: 0.00 0.00 0.00
-st-vrain.cs.colostate.ed up   6 days, 16:12,    load average: 0.56 0.25 0.26
-betaz.cs.colostate.edu   up   4 days, 18:25,    load average: 0.01 0.02 0.00
-huron.cs.colostate.edu   up  10 days, 15:10,    load average: 0.01 0.02 0.00
-strauss.cs.colostate.edu up  10 days, 15:31,    load average: 0.12 0.09 0.08
-twins-tower.cs.colostate up  10 days, 16:12,    load average: 0.12 0.25 0.34
-lindsey.cs.colostate.edu up  17 days, 16:57,    load average: 0.15 0.24 0.14
-tsar.cs.colostate.edu    up  10 days, 15:07,    load average: 0.91 0.39 0.20
-temple.cs.colostate.edu  up   6 days, 15:35,    load average: 0.27 0.35 0.40
-kitaro.cs.colostate.edu  up   4 days, 18:34,    load average: 0.00 0.00 0.00
-recondite.cs.colostate.e up  10 days, 15:10,    load average: 0.10 0.22 0.29
-acushla.cs.colostate.edu up  45 days, 16:52,    load average: 0.00 0.00 0.00
-eolus.cs.colostate.edu   up  10 days, 15:09,    load average: 1.71 1.04 0.75
-dates.cs.colostate.edu   up  10 days, 15:33,    load average: 0.67 0.68 0.72
-lattice-56.cs.colostate. up   6 days, 18:41,    load average: 0.00 0.00 0.00
-lattice-67.cs.colostate. up   6 days, 18:36,    load average: 0.00 0.00 0.00
-lattice-53.cs.colostate. up   6 days, 18:51,    load average: 0.00 0.00 0.00
-lattice-62.cs.colostate. up   6 days, 18:41,    load average: 0.02 0.01 0.00
-lattice-61.cs.colostate. up   6 days, 18:37,    load average: 0.00 0.00 0.00
-lattice-50.cs.colostate. up   6 days, 18:50,    load average: 0.00 0.00 0.00
-lattice-70.cs.colostate. up   6 days, 17:59,    load average: 0.00 0.00 0.00
-lattice-66.cs.colostate. up   6 days, 18:41,    load average: 0.00 0.00 0.00
-lattice-60.cs.colostate. up   6 days, 18:42,    load average: 0.00 0.00 0.00
-concord.cs.colostate.edu up  16 days, 18:12,    load average: 1.05 0.90 0.75
-lattice-58.cs.colostate. up   6 days, 18:39,    load average: 0.00 0.00 0.00
-lattice-71.cs.colostate. up   6 days, 18:36,    load average: 0.00 0.00 0.00
-london.cs.colostate.edu  up  16 days, 16:02,    load average: 1.98 1.76 1.06
-chestnut.cs.colostate.ed up  16 days, 16:19,    load average: 0.72 0.67 0.59
-lattice-49.cs.colostate. up   7 days, 17:42,    load average: 0.00 0.00 0.00
-lattice-79.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-73.cs.colostate. up   6 days, 18:00,    load average: 0.00 0.00 0.00
-lattice-57.cs.colostate. up   6 days, 18:38,    load average: 0.00 0.00 0.00
-lattice-55.cs.colostate. up   6 days, 18:42,    load average: 0.00 0.00 0.00
-lattice-96.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lang.cs.colostate.edu    up  10 days, 14:25,    load average: 0.00 0.00 0.00
-lattice-68.cs.colostate. up   6 days, 18:40,    load average: 0.06 0.03 0.00
-lattice-52.cs.colostate. up   6 days, 18:52,    load average: 0.00 0.00 0.00
-lattice-99.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-110.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-121.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-moscow.cs.colostate.edu  up  16 days, 16:29,    load average: 0.96 0.47 0.21
-lattice-72.cs.colostate. up   6 days, 18:35,    load average: 0.00 0.00 0.00
-seoul.cs.colostate.edu   up  16 days, 15:52,    load average: 0.03 0.12 0.13
-lima.cs.colostate.edu    up  16 days, 15:59,    load average: 0.27 0.10 0.03
-lattice-63.cs.colostate. up   6 days, 18:37,    load average: 0.00 0.00 0.00
-lattice-59.cs.colostate. up   6 days, 18:39,    load average: 0.16 0.09 0.02
-lattice-75.cs.colostate. up   6 days, 18:35,    load average: 0.00 0.00 0.00
-jakarta.cs.colostate.edu up  16 days, 16:03,    load average: 1.12 1.15 1.17
-lattice-131.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-kale.cs.colostate.edu    up  11 days, 18:20,    load average: 1.00 1.00 1.00
-phoenix.cs.colostate.edu up  16 days, 18:11,    load average: 1.00 1.00 1.00
-eggplant.cs.colostate.ed up  11 days, 18:21,    load average: 1.00 1.00 1.00
-lattice-54.cs.colostate. up   6 days, 18:44,    load average: 0.02 0.02 0.00
-lattice-97.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-87.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-77.cs.colostate. up   6 days, 17:58,    load average: 0.00 0.00 0.00
-lattice-69.cs.colostate. up   6 days, 17:59,    load average: 0.00 0.00 0.00
-lattice-74.cs.colostate. up   6 days, 17:58,    load average: 0.00 0.00 0.00
-lattice-133.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-122.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-76.cs.colostate. up   6 days, 18:35,    load average: 0.00 0.00 0.00
-kuskokwim.cs.colostate.e up  10 days, 15:13,    load average: 1.55 1.57 1.54
-lattice-82.cs.colostate. up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-107.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-almond.cs.colostate.edu  up  16 days, 16:00,    load average: 1.91 1.53 0.94
-cut-bank.cs.colostate.ed up  10 days, 14:58,    load average: 0.00 0.00 0.00
-lattice-106.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-102.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-125.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-lattice-111.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-walnut.cs.colostate.edu  up  16 days, 17:07,    load average: 0.00 0.00 0.00
-lattice-126.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-pine.cs.colostate.edu    up  16 days, 15:56,    load average: 0.41 0.18 0.24
-lattice-104.cs.colostate up  45 days, 16:55,    load average: 0.00 0.00 0.00
-nangai.cs.colostate.edu  up           18:32,    load average: 0.00 0.00 0.00
-acorn.cs.colostate.edu   up  16 days, 16:00,    load average: 0.57 0.82 0.84
-lattice-31.cs.colostate. up   6 days, 20:18,    load average: 0.00 0.00 0.00
-lattice-22.cs.colostate. up   6 days, 20:12,    load average: 0.00 0.00 0.00
-conejos.cs.colostate.edu up  10 days, 15:40,    load average: 0.84 0.60 0.34
-toast.cs.colostate.edu   up  10 days, 14:16,    load average: 2.33 1.65 0.70
-lattice-20.cs.colostate. up   6 days, 18:12,    load average: 0.00 0.00 0.00
-cheyenne.cs.colostate.ed up  16 days, 18:15,    load average: 0.00 0.00 0.00
-lattice-35.cs.colostate. up   6 days, 20:15,    load average: 0.02 0.03 0.01
-topeka.cs.colostate.edu  up  16 days, 18:33,    load average: 0.00 0.00 0.00
-bismarck.cs.colostate.ed up  16 days, 18:07,    load average: 0.04 0.01 0.00
-columbia.cs.colostate.ed up  16 days, 18:22,    load average: 0.00 0.00 0.00
-jefferson-city.cs.colost up  16 days, 18:07,    load average: 0.00 0.00 0.00
-salem.cs.colostate.edu   up  16 days, 18:10,    load average: 0.00 0.00 0.00
-santa-fe.cs.colostate.ed up  16 days, 18:05,    load average: 0.00 0.00 0.00
-huckleberries.cs.colosta up  10 days, 15:11,    load average: 0.00 0.00 0.00
-tongue.cs.colostate.edu  up  10 days, 15:25,    load average: 0.00 0.00 0.00
-kiwis.cs.colostate.edu   up  10 days, 15:33,    load average: 0.11 0.27 0.24
-carson-city.cs.colostate up  16 days, 18:08,    load average: 0.00 0.00 0.00
-salt-lake-city.cs.colost up  16 days, 18:42,    load average: 0.02 0.08 0.08
-poudre.cs.colostate.edu  up  10 days, 15:32,    load average: 0.00 0.05 0.11
-nowood.cs.colostate.edu  up  10 days, 15:13,    load average: 0.16 0.11 0.09
-chip.cs.colostate.edu    up           20:36,    load average: 0.00 0.00 0.00
-yukon.cs.colostate.edu   up  10 days, 16:19,    load average: 0.00 0.00 0.00
-apples.cs.colostate.edu  up   3 days, 17:48,    load average: 0.00 0.00 0.00
-mustang.cs.colostate.edu up  13 days, 16:18,    load average: 0.00 0.09 0.12
-washington-dc.cs.colosta up   3 days, 19:35,    load average: 0.00 0.00 0.00
-bugatti.cs.colostate.edu up  13 days, 16:18,    load average: 0.00 0.00 0.00
-lamborghini.cs.colostate up  13 days, 16:18,    load average: 0.00 0.00 0.00
-jaguar.cs.colostate.edu  up  13 days, 16:18,    load average: 0.00 0.00 0.00
-porsche.cs.colostate.edu up  13 days, 16:19,    load average: 0.00 0.00 0.00
-ferrari.cs.colostate.edu up  13 days, 16:20,    load average: 0.00 0.00 0.00
-lotus.cs.colostate.edu   up  13 days, 16:13,    load average: 0.00 0.00 0.00
-bentley.cs.colostate.edu up  13 days, 16:16,    load average: 0.00 0.00 0.00
-maserati.cs.colostate.ed up  13 days, 16:13,    load average: 0.00 0.00 0.00
-bacon.cs.colostate.edu   up  45 days, 16:49,    load average: 1.00 0.99 0.72
-damavand.cs.colostate.ed up  42 days, 13 mins,  load average: 0.00 0.00 0.00
-eggs.cs.colostate.edu    up  45 days, 16:49,    load average: 1.00 0.98 0.70
-kenai.cs.colostate.edu   up           13:47,    load average: 7.02 6.25 3.94
-oak                      up  14 days, 21:51,    load average: 0.01 0.02 0.00
+lunette.cs.colostate.edu up  10 days, 23:10,    load average: 0.00 0.00 0.00
+fryatt.cs.colostate.edu  up  10 days, 23:33,    load average: 0.00 0.00 0.00
+k2.cs.colostate.edu      up  10 days, 23:10,    load average: 0.00 0.00 0.00
+kitchener.cs.colostate.e up  10 days, 22:48,    load average: 0.02 0.01 0.00
+makalu.cs.colostate.edu  up  10 days, 22:49,    load average: 0.00 0.00 0.00
+pomegranates.cs.colostat up  46 days, 30 mins,  load average: 0.00 0.00 0.00
+kaiso.cs.colostate.edu   up            8:03,    load average: 0.00 0.00 0.00
+clemenceau.cs.colostate. up   7 days, 49 mins,  load average: 0.06 0.02 0.00
+diadem.cs.colostate.edu  up  10 days, 22:50,    load average: 0.00 0.00 0.00
+edith-cavell.cs.colostat up  10 days, 22:48,    load average: 0.00 0.00 0.00
+belford.cs.colostate.edu up  26 days,  6:12,    load average: 0.00 0.00 0.00
+laramie.cs.colostate.edu up  10 days, 22:52,    load average: 0.00 0.00 0.00
+assiniboine.cs.colostate up  10 days, 23:14,    load average: 0.00 0.00 0.00
+alexandra.cs.colostate.e up  10 days, 23:20,    load average: 0.00 0.00 0.00
+bross.cs.colostate.edu   up  10 days, 22:50,    load average: 0.00 0.00 0.00
+tsar.cs.colostate.edu    up  10 days, 22:46,    load average: 0.31 0.37 0.36
+bryce.cs.colostate.edu   up  10 days, 22:49,    load average: 0.00 0.00 0.00
+horseradish.cs.colostate up  12 days,  1:57,    load average: 0.00 0.00 0.00
+garlic.cs.colostate.edu  up  11 days,  3:05,    load average: 0.00 0.00 0.00
+humboldt.cs.colostate.ed up  10 days, 22:49,    load average: 0.05 0.01 0.00
+parsley.cs.colostate.edu up  13 days, 22:19,    load average: 0.00 0.00 0.00
+athabasca.cs.colostate.e up  10 days, 22:55,    load average: 0.00 0.00 0.00
+wasabi.cs.colostate.edu  up  12 days,  1:58,    load average: 0.00 0.00 0.00
+lincoln.cs.colostate.edu up  17 days,  1:59,    load average: 0.31 0.26 0.19
+salem.cs.colostate.edu   up  17 days,  1:48,    load average: 0.22 0.06 0.14
+betaz.cs.colostate.edu   up   5 days,  2:03,    load average: 0.00 0.00 0.00
+lettuce.cs.colostate.edu up  12 days,  1:59,    load average: 0.00 0.00 0.00
+huron.cs.colostate.edu   up  10 days, 22:49,    load average: 0.00 0.01 0.01
+kitaro.cs.colostate.edu  up   5 days,  2:12,    load average: 0.00 0.00 0.00
+kelp.cs.colostate.edu    up  12 days,  1:59,    load average: 0.00 0.00 0.00
+lindsey.cs.colostate.edu up  18 days, 36 mins,  load average: 0.10 0.10 0.05
+twins-tower.cs.colostate up  10 days, 23:50,    load average: 0.13 0.11 0.26
+fennel.cs.colostate.edu  up  11 days,  3:05,    load average: 0.00 0.00 0.00
+gourd.cs.colostate.edu   up  11 days,  3:04,    load average: 0.00 0.00 0.00
+rutabaga.cs.colostate.ed up  11 days,  3:04,    load average: 0.00 0.00 0.00
+rhubarb.cs.colostate.edu up  13 days, 22:18,    load average: 0.00 0.00 0.00
+shallot.cs.colostate.edu up  12 days,  1:58,    load average: 0.00 0.00 0.00
+parsnip.cs.colostate.edu up  13 days, 22:18,    load average: 0.00 0.00 0.00
+pumpkin.cs.colostate.edu up  13 days, 22:18,    load average: 0.00 0.00 0.00
+pea.cs.colostate.edu     up  13 days, 22:19,    load average: 0.00 0.00 0.00
+radish.cs.colostate.edu  up  13 days, 22:19,    load average: 0.00 0.00 0.00
+chestnut.cs.colostate.ed up  16 days, 23:57,    load average: 0.71 0.67 0.79
+leek.cs.colostate.edu    up  12 days,  1:57,    load average: 0.00 0.00 0.00
+kale.cs.colostate.edu    up  12 days,  1:58,    load average: 1.00 1.00 1.00
+romanesco.cs.colostate.e up  12 days,  1:58,    load average: 0.00 0.00 0.00
+pepper.cs.colostate.edu  up  13 days, 22:18,    load average: 0.00 0.00 0.00
+jakarta.cs.colostate.edu up  16 days, 23:41,    load average: 1.02 1.10 1.12
+salt-lake-city.cs.colost up  17 days,  2:20,    load average: 0.13 0.11 0.09
+onion.cs.colostate.edu   up  13 days, 22:18,    load average: 0.00 0.01 0.12
+acushla.cs.colostate.edu up  46 days, 31 mins,  load average: 0.00 0.00 0.00
+okra.cs.colostate.edu    up  13 days, 22:19,    load average: 0.00 0.00 0.00
+eolus.cs.colostate.edu   up  10 days, 22:48,    load average: 0.05 0.26 0.67
+potato.cs.colostate.edu  up  13 days, 22:18,    load average: 0.00 0.00 0.00
+platte.cs.colostate.edu  up   5 days,  9:41,    load average: 0.76 0.59 0.40
+phoenix.cs.colostate.edu up  17 days,  1:50,    load average: 1.00 1.00 1.00
+faure.cs.colostate.edu   up  46 days, 30 mins,  load average: 0.77 0.64 0.39
+kuskokwim.cs.colostate.e up  10 days, 22:51,    load average: 1.16 1.25 1.26
+damascus.cs.colostate.ed up  16 days, 23:45,    load average: 0.04 0.06 0.08
+recondite.cs.colostate.e up  10 days, 22:49,    load average: 0.36 0.27 0.23
+yam.cs.colostate.edu     up  46 days, 56 mins,  load average: 0.11 0.18 0.26
+temple.cs.colostate.edu  up   6 days, 23:13,    load average: 0.75 0.47 0.49
+sacramento.cs.colostate. up  17 days,  1:58,    load average: 1.00 1.00 1.00
+zucchini.cs.colostate.ed up  46 days, 56 mins,  load average: 0.00 0.00 0.00
+st-vrain.cs.colostate.ed up   6 days, 23:51,    load average: 1.13 0.95 0.82
+lattice-53.cs.colostate. up   7 days,  2:29,    load average: 0.02 0.01 0.00
+lattice-62.cs.colostate. up   7 days,  2:20,    load average: 0.00 0.00 0.00
+lattice-60.cs.colostate. up   7 days,  2:21,    load average: 0.00 0.00 0.00
+acorn.cs.colostate.edu   up  16 days, 23:38,    load average: 0.41 0.67 0.84
+lattice-108.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.01 0.00
+lattice-66.cs.colostate. up   7 days,  2:19,    load average: 0.00 0.00 0.00
+almond.cs.colostate.edu  up  16 days, 23:38,    load average: 0.09 0.04 0.09
+lattice-67.cs.colostate. up   7 days,  2:15,    load average: 0.00 0.00 0.00
+lattice-56.cs.colostate. up   7 days,  2:19,    load average: 0.00 0.00 0.00
+strauss.cs.colostate.edu up  10 days, 23:10,    load average: 0.03 0.05 0.01
+lattice-50.cs.colostate. up   7 days,  2:28,    load average: 0.00 0.00 0.00
+lattice-52.cs.colostate. up   7 days,  2:30,    load average: 0.00 0.00 0.00
+lattice-58.cs.colostate. up   7 days,  2:18,    load average: 0.00 0.00 0.00
+lattice-64.cs.colostate. up   7 days,  2:15,    load average: 0.00 0.00 0.00
+hickory.cs.colostate.edu up           10:22,    load average: 0.00 0.00 0.00
+lattice-57.cs.colostate. up   7 days,  2:16,    load average: 0.00 0.00 0.00
+eggplant.cs.colostate.ed up  12 days,  2:00,    load average: 1.00 1.00 1.00
+lattice-49.cs.colostate. up   8 days,  1:20,    load average: 0.01 0.00 0.00
+lattice-65.cs.colostate. up   7 days,  2:15,    load average: 0.00 0.00 0.00
+lattice-59.cs.colostate. up   7 days,  2:17,    load average: 0.00 0.00 0.00
+lattice-70.cs.colostate. up   7 days,  1:37,    load average: 0.00 0.00 0.00
+dates.cs.colostate.edu   up  10 days, 23:11,    load average: 3.16 2.64 1.97
+copper.cs.colostate.edu  up   6 days,  7:29,    load average: 0.02 0.13 0.20
+lattice-74.cs.colostate. up   7 days,  1:36,    load average: 0.00 0.00 0.00
+lattice-61.cs.colostate. up   7 days,  2:16,    load average: 0.00 0.00 0.00
+lattice-71.cs.colostate. up   7 days,  2:14,    load average: 0.00 0.01 0.00
+depuy.cs.colostate.edu   up   4 days,  4:02,    load average: 1.01 0.62 0.37
+lattice-68.cs.colostate. up   7 days,  2:18,    load average: 0.00 0.00 0.00
+lattice-55.cs.colostate. up   7 days,  2:21,    load average: 0.00 0.00 0.00
+bangkok.cs.colostate.edu up  16 days, 23:42,    load average: 0.10 0.12 0.10
+santa-fe.cs.colostate.ed up  17 days,  1:44,    load average: 1.00 1.00 1.00
+beech.cs.colostate.edu   up  16 days, 23:38,    load average: 0.00 0.00 0.00
+singapore.cs.colostate.e up  16 days, 23:30,    load average: 0.75 0.68 0.48
+pili.cs.colostate.edu    up  16 days, 21:36,    load average: 0.00 0.01 0.08
+brazil.cs.colostate.edu  up  16 days, 23:27,    load average: 0.00 0.00 0.00
+lattice-73.cs.colostate. up            2:44,    load average: 0.12 0.12 0.10
+uncompahgre.cs.colostate up            1:04,    load average: 0.00 0.00 0.04
+bacon.cs.colostate.edu   up  46 days, 28 mins,  load average: 1.00 1.00 1.00
+eggs.cs.colostate.edu    up  46 days, 27 mins,  load average: 1.02 1.01 1.00
+damavand.cs.colostate.ed up  42 days,  7:52,    load average: 1.00 1.00 1.00
+popo-agie.cs.colostate.e up  10 days, 22:52,    load average: 0.02 0.02 0.00
+coconut.cs.colostate.edu up  16 days, 21:36,    load average: 0.28 0.18 0.33
+oak                      up  15 days,  5:29,    load average: 0.00 0.00 0.00
+lattice-116.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-77.cs.colostate. up   7 days,  1:36,    load average: 0.00 0.00 0.00
+lattice-96.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-97.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-69.cs.colostate. up   7 days,  1:38,    load average: 0.06 0.01 0.00
+lattice-72.cs.colostate. up            3:41,    load average: 0.00 0.00 0.00
+lattice-124.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-123.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-54.cs.colostate. up   7 days,  2:23,    load average: 0.00 0.00 0.00
+lattice-75.cs.colostate. up   7 days,  2:14,    load average: 0.00 0.00 0.00
+lattice-117.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-128.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-119.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-103.cs.colostate up  46 days, 34 mins,  load average: 0.02 0.01 0.00
+lattice-85.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-76.cs.colostate. up   7 days,  2:14,    load average: 0.00 0.00 0.00
+lattice-80.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-63.cs.colostate. up   7 days,  2:15,    load average: 0.00 0.00 0.00
+lattice-133.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-83.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-109.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-132.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-82.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-102.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-105.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-24.cs.colostate. up   7 days,  1:47,    load average: 0.00 0.00 0.00
+lattice-5.cs.colostate.e up            7:48,    load average: 0.00 0.00 0.00
+lima.cs.colostate.edu    up  16 days, 23:38,    load average: 0.01 0.18 0.16
+lattice-37.cs.colostate. up   7 days,  3:55,    load average: 0.00 0.02 0.00
+melons.cs.colostate.edu  up  10 days, 22:49,    load average: 0.33 0.39 0.86
+lattice-41.cs.colostate. up   7 days,  3:55,    load average: 0.00 0.00 0.00
+lattice-6.cs.colostate.e up   7 days,  3:53,    load average: 0.00 0.00 0.00
+pears.cs.colostate.edu   up  10 days, 23:18,    load average: 0.15 0.15 0.16
+lattice-39.cs.colostate. up   7 days,  3:57,    load average: 0.00 0.00 0.00
+lattice-21.cs.colostate. up   7 days,  3:57,    load average: 0.00 0.00 0.00
+lattice-35.cs.colostate. up   7 days,  3:54,    load average: 0.06 0.05 0.01
+lattice-27.cs.colostate. up   7 days,  1:43,    load average: 0.01 0.00 0.00
+lattice-47.cs.colostate. up   7 days,  3:56,    load average: 0.01 0.00 0.00
+lattice-45.cs.colostate. up   7 days,  3:50,    load average: 0.00 0.00 0.00
+lattice-33.cs.colostate. up            4:30,    load average: 0.00 0.00 0.00
+lattice-4.cs.colostate.e up            7:49,    load average: 0.00 0.00 0.00
+lattice-38.cs.colostate. up   7 days,  3:19,    load average: 0.00 0.00 0.00
+lattice-100.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-3.cs.colostate.e up            7:52,    load average: 0.00 0.00 0.00
+lattice-43.cs.colostate. up   7 days,  3:58,    load average: 0.00 0.00 0.00
+lattice-1.cs.colostate.e up           23:45,    load average: 0.00 0.00 0.00
+lattice-40.cs.colostate. up   7 days,  3:17,    load average: 0.00 0.00 0.00
+lattice-22.cs.colostate. up   7 days,  3:50,    load average: 0.00 0.00 0.00
+lattice-18.cs.colostate. up   7 days,  3:58,    load average: 0.00 0.00 0.00
+lattice-8.cs.colostate.e up   7 days,  4:00,    load average: 0.00 0.00 0.00
+lattice-42.cs.colostate. up   7 days,  3:47,    load average: 0.00 0.00 0.00
+lattice-11.cs.colostate. up   7 days,  3:53,    load average: 0.00 0.00 0.00
+lattice-32.cs.colostate. up   7 days,  3:56,    load average: 0.00 0.00 0.00
+lattice-31.cs.colostate. up   7 days,  3:56,    load average: 0.02 0.01 0.00
+lattice-26.cs.colostate. up   7 days,  3:57,    load average: 0.00 0.00 0.00
+lattice-87.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-122.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-90.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-126.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-95.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-112.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-99.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-89.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-88.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-104.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-94.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-15.cs.colostate. up   7 days,  3:58,    load average: 0.00 0.00 0.00
+hams-fork.cs.colostate.e up  10 days, 22:50,    load average: 0.00 0.00 0.00
+lattice-17.cs.colostate. up   7 days,  3:55,    load average: 0.00 0.00 0.00
+maserati.cs.colostate.ed up  13 days, 23:52,    load average: 0.00 0.00 0.00
+bentley.cs.colostate.edu up  13 days, 23:54,    load average: 0.00 0.00 0.00
+ferrari.cs.colostate.edu up  13 days, 23:59,    load average: 0.00 0.00 0.00
+tallahassee.cs.colostate up            5 mins,  load average: 0.31 0.43 0.21
+lattice-129.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-81.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-121.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-98.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-111.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-127.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-79.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-118.cs.colostate up  46 days, 33 mins,  load average: 0.00 0.00 0.00
+lattice-131.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+oak.cs.colostate.edu     up  15 days,  5:29,    load average: 0.00 0.00 0.00
+lattice-101.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.01 0.00
+lattice-115.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+missouri.cs.colostate.ed up  10 days, 22:52,    load average: 0.68 0.58 0.36
+lattice-93.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lang.cs.colostate.edu    up  10 days, 22:04,    load average: 0.00 0.00 0.00
+lattice-120.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-84.cs.colostate. up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+lattice-130.cs.colostate up  46 days, 34 mins,  load average: 0.00 0.00 0.00
+peaches.cs.colostate.edu up  10 days, 23:09,    load average: 0.00 0.00 0.00
+kenai.cs.colostate.edu   up           21:26,    load average: 0.02 0.09 0.19
+jefferson.cs.colostate.e up  10 days, 22:35,    load average: 0.18 0.15 0.06
+massive.cs.colostate.edu up  46 days,  3:02,    load average: 0.00 0.00 0.00
+tehran.cs.colostate.edu  up  16 days, 23:38,    load average: 0.00 0.05 0.08
+lattice-125.cs.colostate up  46 days, 35 mins,  load average: 0.00 0.00 0.00
