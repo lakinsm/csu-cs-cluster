@@ -62,7 +62,7 @@ c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 c.connect('abdoserver2.cvmbs.colostate.edu')
 
 scp = scp.SCPClient(c.get_transport())
-scp.get('/home/lakinsm/hmm_testing/cs_cluster_files/parts/project7/{}'.format(fastafile), dirname+'inputfiles/{}'.format(fastafile))
+scp.get('/home/lakinsm/hmm_testing/cs_cluster_files/parts/pediatric/{}'.format(fastafile), dirname+'inputfiles/{}'.format(fastafile))
 
 ## FIXME: check to see if models are intact/present
 
@@ -73,7 +73,7 @@ sys.stderr.write('\n'.join([str(x) for x in stderrlines])+'\n')
 p.wait()
 
 if is_complete(dirname+'outputfiles/{}'.format(outname)):
-    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/{}'.format(outname))
+    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/pediatric/groupI/{}'.format(outname))
 
 scp.close()
 c.close()
