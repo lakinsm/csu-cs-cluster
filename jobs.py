@@ -27,12 +27,12 @@ def is_complete(filename):
 
 
 def check_models_exist(dirname):
-    if not os.path.isfile(dirname+'HMMs/mmarc_groupIII.hmm'):
+    if not os.path.isfile(dirname+'HMMs/mmarc_groupI.hmm'):
         sys.stderr.write('Model file not present on the machine\n')
         sys.exit(1)
 
 # CPU, dirname, outputfile, dirname, dirname, inputfile
-HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupIII.hmm {}inputfiles/{} > /dev/null'
+HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupI.hmm {}inputfiles/{} > /dev/null'
 
 #resource.setrlimit(resource.RLIMIT_CPU, 3600)
 
@@ -62,7 +62,7 @@ c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 c.connect('abdoserver2.cvmbs.colostate.edu')
 
 scp = scp.SCPClient(c.get_transport())
-scp.get('/home/lakinsm/hmm_testing/cs_cluster_files/parts/soil/{}'.format(fastafile), dirname+'inputfiles/{}'.format(fastafile))
+scp.get('/home/lakinsm/hmm_testing/cs_cluster_files/parts/project7/{}'.format(fastafile), dirname+'inputfiles/{}'.format(fastafile))
 
 ## FIXME: check to see if models are intact/present
 
@@ -73,7 +73,7 @@ sys.stderr.write('\n'.join([str(x) for x in stderrlines])+'\n')
 p.wait()
 
 if is_complete(dirname+'outputfiles/{}'.format(outname)):
-    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/soil/groupIII/{}'.format(outname))
+    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/groupI/{}'.format(outname))
 
 scp.close()
 c.close()

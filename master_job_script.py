@@ -75,7 +75,7 @@ def load_initial_jobs(jobdefs):
     """Load the intiial jobs"""
     with open(jobdefs, 'r') as j:
         return deque((x for x in j.read().split() if x and not \
-            is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/soil/groupIII/{}'.format(x.replace('.fasta', '.tblout.scan')))))
+            is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/groupI/{}'.format(x.replace('.fasta', '.tblout.scan')))))
 
 
 def init_workers(job_queue):
@@ -110,7 +110,7 @@ if __name__ == '__main__':
                 w_status = True
             if w_status and v:
                 #print(w_status, v[1])
-                if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/soil/groupIII/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
+                if not is_complete('/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/groupI/{}'.format(v[0].replace('.fasta', '.tblout.scan'))):
                     print('{} error: {}'.format(k, v[4].readlines()))
                     print('{} not completed successfully in {:.3f} seconds on {} cores, requeuing...'.format(v[0], time.time() - v[5], num_virt_cores(k)))
                     jobs.append(v[0])
