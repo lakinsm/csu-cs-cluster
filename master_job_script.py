@@ -94,6 +94,7 @@ if __name__ == '__main__':
     cpu_info = {entry[0]: entry for entry in machines.machines}
     initjobs = load_initial_jobs(sys.argv[2])
     workers = load_workers(sys.argv[1])
+    workers = [x for x in workers if x in cpu_info]
     for i in initjobs:
         if not is_complete(i):
             jobs.append(i)
