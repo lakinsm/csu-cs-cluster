@@ -209,7 +209,6 @@ ssh vail.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/vail/
 ssh venus.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/venus/a/tmp'
 ssh waffles.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/waffles/a/tmp'
 ssh wasabi.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/wasabi/a/tmp'
-ssh washington-dc.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/washington-dc/a/tmp'
 ssh wind.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/wind/a/tmp'
 ssh winter-park.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/winter-park/a/tmp'
 ssh wolf-creek.cs.colostate.edu '/s/chopin/a/grad/lakinsm/uftp-4.9.2/uftpd -D /s/wolf-creek/a/tmp'
