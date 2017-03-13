@@ -9,7 +9,7 @@ def mysplit(line):
     return fields
 
 machines = []
-for lnum, line in enumerate(open("machines.2")):
+for lnum, line in enumerate(open("servers/2017_machines.txt")):
     if lnum > 1:
         fields = mysplit(line.strip()) # re.split(r"\s+", line.strip())
         if len(fields) >= 7:
