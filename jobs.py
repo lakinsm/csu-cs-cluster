@@ -27,12 +27,12 @@ def is_complete(filename):
 
 
 def check_models_exist(dirname):
-    if not os.path.isfile(dirname+'HMMs/mmarc_groupII.hmm'):
+    if not os.path.isfile(dirname+'HMMs/mmarc_groupIII.hmm'):
         sys.stderr.write('Model file not present on the machine\n')
         sys.exit(1)
 
 # CPU, dirname, outputfile, dirname, dirname, inputfile
-HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupII.hmm {}inputfiles/{} > /dev/null'
+HMMER_CMD = '/s/chopin/a/grad/lakinsm/cs_cluster/hmmer/binaries/nhmmer --dna --notextw --cpu {} --tblout {}/outputfiles/{} {}HMMs/mmarc_groupIII.hmm {}inputfiles/{} > /dev/null'
 
 #resource.setrlimit(resource.RLIMIT_CPU, 3600)
 
@@ -73,7 +73,7 @@ sys.stderr.write('\n'.join([str(x) for x in stderrlines])+'\n')
 p.wait()
 
 if is_complete(dirname+'outputfiles/{}'.format(outname)):
-    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/groupII/{}'.format(outname))
+    scp.put(dirname+'outputfiles/{}'.format(outname), '/home/lakinsm/hmm_testing/cs_cluster_files/output/project7/groupIII/{}'.format(outname))
 
 scp.close()
 c.close()
